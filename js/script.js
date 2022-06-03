@@ -136,7 +136,6 @@ const closeModal = function () {
 (async function () {
   try {
     const data = await fetchData(URL);
-    console.log(data);
     cardHandler(data);
     employeesData = data.results;
     const cards = document.querySelectorAll(".card");
