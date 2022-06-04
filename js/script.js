@@ -73,7 +73,7 @@ const generateModalHTML = function (data) {
   const modalHTML = `
   <div class="modal-container">
             <div class="modal">
-                <button type="button" id="modal-close-btn" class="modal-close-btn"><strong>X</strong></button>
+                <button type="button" id="modal-close-btn" class="modal-close-btn close"><strong class='close'>X</strong></button>
                 <div class="modal-info-container">
                     <img class="modal-img" src="${
                       data.picture.large
@@ -189,5 +189,5 @@ body.addEventListener("click", function (e) {
   if (e.target.id === "modal-next")
     if (actualPosition < 11) clickHandler("modal-next");
 
-  if (e.target.id === "modal-close-btn") closeModal();
+  if (e.target.classList.contains("close")) closeModal();
 });
